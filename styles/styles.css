@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
 }
@@ -174,13 +175,18 @@ body {
   top: auto;
 }
 #es-rc #es-rc-content .es-ingredients__list {
-  padding: 30px 10px;
   background-color: #ffffff;
   display: flex;
+  max-height: 0;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
   color: #044b72;
+}
+#es-rc #es-rc-content .es-ingredients__list.open {
+  padding: 30px 10px;
+  max-height: 1000px;
 }
 #es-rc #es-rc-content .es-ingredients__item-title {
   margin-bottom: 10px;
@@ -211,6 +217,9 @@ body {
   cursor: pointer;
   animation: pulse2 1s infinite;
 }
+#es-rc #es-rc-content .es-cross__circle.active + .es-cross__line {
+  opacity: 1; /* Показываем линию, если кружок активен */
+}
 #es-rc #es-rc-content .es-cross {
   padding-top: 30px;
 }
@@ -226,36 +235,46 @@ body {
   margin: 0 auto;
 }
 #es-rc #es-rc-content .es-cross__numbers {
+  position: relative;
   display: flex;
   justify-content: center;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
+  padding-bottom: 150px;
   background-color: #ffffff;
+}
+#es-rc #es-rc-content .es-cross__circle-wrapper {
   position: relative;
-  padding-bottom: 100px;
+}
+#es-rc #es-rc-content .es-cross__line {
+  position: absolute;
+  top: 88%; /* Линия будет располагаться ниже кружка */
+  left: 50%; /* Центрируем линию */
+  width: 2px;
+  height: 50px;
+  background-color: #044b72;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#es-rc #es-rc-content .es-cross__circle--1.active {
+  opacity: 1;
 }
 #es-rc #es-rc-content .es-cross__product {
   position: absolute;
-  bottom: 40px;
-  margin-top: 10px;
-  background-color: #ffffff;
-  color: #044b72;
+  display: inline-block;
+  top: 50%;
+  left: 0;
   font-weight: 700;
   font-size: 16px;
+  color: #044b72;
   text-align: center;
+  padding-top: 10px;
   z-index: 10;
-}
-#es-rc #es-rc-content .es-cross__product::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 50px;
-  background: #044b72;
 }
 #es-rc #es-rc-content .es-cross__circle {
   cursor: pointer;
+  position: relative;
 }
 #es-rc #es-rc-content .es-slider {
   position: relative;
@@ -271,6 +290,16 @@ body {
   position: relative;
   margin: 0 auto;
 }
+#es-rc #es-rc-content .es-slider__group {
+  border: 1px solid #1aa0cb;
+  overflow: hidden;
+}
+#es-rc #es-rc-content .es-slider__group:nth-of-type(2) {
+  border-top: none;
+}
+#es-rc #es-rc-content .es-slider__group:nth-of-type(3) {
+  border-top: none;
+}
 #es-rc #es-rc-content .es-slider__image-title {
   max-width: 150px;
   position: absolute;
@@ -284,7 +313,6 @@ body {
   color: #044b72;
 }
 #es-rc #es-rc-content .es-slider__title {
-  margin-top: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-weight: 700;
@@ -323,6 +351,7 @@ body {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 #es-rc #es-rc-content .es-disclaimer {
   padding-top: 30px;
@@ -451,20 +480,19 @@ body {
     font-size: 18px;
   }
   #es-rc #es-rc-content .es-slider__content {
-    max-width: 350px;
+    background: #ffffff;
   }
   #es-rc #es-rc-content .es-slider__description {
     font-size: 18px;
   }
-  #es-rc #es-rc-content .es-slider__image {
-    max-width: 110%;
-  }
 }
 @media screen and (min-width: 567px) and (min-width: 768px) {
   #es-rc #es-rc-content .es-title {
-    margin-top: 50px;
     max-width: 70%;
     font-size: 40px;
+  }
+  #es-rc #es-rc-content .es-slider__title {
+    max-width: 100%;
   }
   #es-rc #es-rc-content .es-kv {
     position: relative;
@@ -472,7 +500,7 @@ body {
   }
   #es-rc #es-rc-content .es-kv__title {
     position: absolute;
-    top: 72%;
+    top: 75%;
     left: 37%;
     background: none;
     z-index: 1;
@@ -522,6 +550,10 @@ body {
   }
   #es-rc #es-rc-content .es-ingredients__list {
     width: 50%;
+    height: auto;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    padding: 30px 10px;
   }
   #es-rc #es-rc-content .es-ingredients__expand {
     display: none;
@@ -553,7 +585,7 @@ body {
     margin-top: 50px;
     background: inherit;
     -moz-column-gap: 35px;
-         column-gap: 35px;
+    column-gap: 35px;
   }
   #es-rc #es-rc-content .es-cross__product {
     background-color: inherit;
@@ -563,6 +595,10 @@ body {
     background: #1aa0cb;
   }
   #es-rc #es-rc-content .es-cross .es-slider__link {
+    margin-top: 0;
+    padding-top: 15px;
+    border: 1px solid #1aa0cb;
+    border-top: 0;
     max-width: 100%;
   }
   #es-rc #es-rc-content .es-disclaimer {

@@ -27,9 +27,6 @@
 
           <div class="es-kv__content">
             <div class="es-kv__photo">
-              <!-- <img class="es-kv__photo-image"
-                   src="./images/photo.png"
-                   alt="Zdjęcie kobiety"> -->
             </div>
             <img class="es-kv__bubbles"
                  src="./images/bubbles.png"
@@ -191,51 +188,62 @@
                    class="es-cross__img">
               <div class="es-cross__numbers">
 
-                <img src="./images/1.png"
-                     class="es-cross__circle es-cross__circle--1"
-                     data-info="Esencja nawilżająca"
-                     data-link="#"
-                     alt=""
-                     style="opacity: 1;">
 
+                <div class="es-cross__circle-wrapper">
+                  <img src="./images/1.png"
+                       class="es-cross__circle es-cross__circle--1"
+                       data-info="Esencja nawilżająca"
+                       data-link="#"
+                       alt=""
+                       style="opacity: 1;">
+                  <div class="es-cross__line"></div>
+                </div>
 
-                <img src="./images/2.png"
-                     class="es-cross__circle es-cross__circle--2"
-                     data-info="Serum odbudowujące"
-                     data-link="#"
-                     alt=""
-                     style="opacity: 0.5;">
+                <div class="es-cross__circle-wrapper">
+                  <img src="./images/2.png"
+                       class="es-cross__circle es-cross__circle--2"
+                       data-info="Serum odbudowujące"
+                       data-link="#"
+                       alt=""
+                       style="opacity: 0.5;">
+                  <div class="es-cross__line"></div>
+                </div>
 
+                <div class="es-cross__circle-wrapper">
+                  <img src="./images/3.png"
+                       class="es-cross__circle es-cross__circle--3"
+                       data-info="Krem kojący "
+                       data-link="#"
+                       alt=""
+                       style="opacity: 0.5;">
+                  <div class="es-cross__line"></div>
+                </div>
 
-                <img src="./images/3.png"
-                     class="es-cross__circle es-cross__circle--3"
-                     data-info="Krem kojący "
-                     data-link="#"
-                     alt=""
-                     style="opacity: 0.5;">
+                <div class="es-cross__circle-wrapper">
+                  <img src="./images/4.png"
+                       class="es-cross__circle es-cross__circle--4"
+                       data-info="Niewidoczny fluid chroniący barierę skóry SPF50+"
+                       data-link="#"
+                       alt=""
+                       style="opacity: 0.5;">
+                  <div class="es-cross__line"></div>
+                </div>
 
-
-                <img src="./images/4.png"
-                     class="es-cross__circle es-cross__circle--4"
-                     data-info="Niewidoczny fluid chroniący barierę skóry SPF50+"
-                     data-link="#"
-                     alt=""
-                     style="opacity: 0.5;">
-
-
-                <img src="./images/5.png"
-                     class="es-cross__circle es-cross__circle--4"
-                     data-info="Krem kojący"
-                     data-link="#"
-                     alt=""
-                     style="opacity: 0.5;">
+                <div class="es-cross__circle-wrapper">
+                  <img src="./images/5.png"
+                       class="es-cross__circle es-cross__circle--4"
+                       data-info="Krem kojący"
+                       data-link="#"
+                       alt=""
+                       style="opacity: 0.5;">
+                  <div class="es-cross__line"></div>
+                </div>
                 <div id="info"
                      class="es-cross__product">Nawilżająca emulsja oczyszczająca</div>
               </div>
             </div>
             <div class="es-slider">
               <div class="swiper swiper1">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="es-slider__content">
@@ -340,14 +348,9 @@
                          class="es-slider__link">dodaj do koszyka</a>
                     </div>
                   </div>
-
-
-
-
                 </div>
-
               </div>
-              <!-- navigation buttons -->
+
               <div class="swiper1-button-prev swiper-button-prev">
                 <img src="./images/arrow-left.png"
                      alt="poprzedni slajd" />
@@ -356,7 +359,7 @@
                 <img src="./images/arrow-left.png"
                      alt="następny slajd" />
               </div>
-              <!-- pagination -->
+
               <div class="swiper1-pagination swiper-pagination"></div>
             </div>
 
@@ -386,31 +389,13 @@
                  alt="Vegańska formuła">
           </div>
         </div>
-
       </div>
+    </div>
 
 
 
-      <script src="./scripts/swiper-bundle.min.js"></script>
-      <script src="./scripts/script.js"></script>
-      <script>
-        const swiper = new Swiper('.swiper1', {
-          // Optional parameters
-          loop: false,
-          autoHeight: true,
-          // autoplay: true,
-
-          pagination: {
-            el: '.swiper1-pagination',
-            clickable: true,
-          },
-
-          navigation: {
-            nextEl: '.swiper1-button-next',
-            prevEl: '.swiper1-button-prev',
-          },
-        });
-      </script>
+    <script src="./scripts/swiper-bundle.min.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 
 </html>
