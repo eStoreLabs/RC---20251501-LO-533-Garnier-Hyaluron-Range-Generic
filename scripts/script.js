@@ -1,11 +1,17 @@
 const circles = document.querySelectorAll('.es-cross__circle');
 const infoElement = document.getElementById('info');
+const expandBtn = document.querySelector('.es-ingredients__expand');
+const reduceBtn = document.querySelector('.es-ingredients__reduce');
+const list = document.querySelector('.es-ingredients__list');
 
-document
-  .querySelector('.es-ingredients__expand')
-  .addEventListener('click', function () {
-    document.querySelector('.es-ingredients__list').classList.toggle('open');
-  });
+function toggleList() {
+  const isOpen = list.classList.toggle('open');
+  expandBtn.style.display = isOpen ? 'none' : 'block';
+  reduceBtn.style.display = isOpen ? 'flex' : 'none';
+}
+
+expandBtn.addEventListener('click', toggleList);
+reduceBtn.addEventListener('click', toggleList);
 
 const swiper = new Swiper('.swiper1', {
   loop: false,
@@ -53,8 +59,7 @@ function updateActiveCircle(index) {
     }
 
     const maxOffset = containerRect.width - infoElement.offsetWidth;
-    if (offsetLeft > maxOffset) offsetLeft = maxOffset;
-    if (offsetLeft < 0) offsetLeft = 0;
+    offsetLeft = Math.min(Math.max(offsetLeft, 0), maxOffset);
   }
 
   infoElement.style.left = index === 0 ? '25px' : `${offsetLeft - 50}px`;
@@ -75,8 +80,7 @@ circles.forEach((circle, index) => {
 });
 
 swiper.on('slideChange', () => {
-  const activeIndex = swiper.activeIndex;
-  updateActiveCircle(activeIndex);
+  updateActiveCircle(swiper.activeIndex);
 });
 
 initializeFirstSlide();

@@ -87,6 +87,8 @@ body {
         rgba(86, 217, 255, 1) 72%,
         rgba(65, 203, 244, 1) 92%
       );
+      -webkit-animation: slidedown 0.2s ease-in;
+      animation: slidedown 0.2s ease-in;
 
       &--uppercase {
         text-transform: uppercase;
@@ -216,6 +218,13 @@ body {
       padding-bottom: 50px;
     }
 
+    &__image-line {
+      &--4 {
+        margin-left: 40px;
+        margin-bottom: 10px;
+      }
+    }
+
     &__image-item {
       position: absolute;
       top: 0;
@@ -276,11 +285,13 @@ body {
       justify-content: center;
       gap: 15px;
       color: $color-main;
+      position: relative;
     }
 
     &__list.open {
       padding: 30px 10px;
       max-height: 1000px;
+      position: relative;
     }
 
     &__item-title {
@@ -303,10 +314,36 @@ body {
       font-size: 18px;
       text-transform: uppercase;
       text-align: center;
+      -webkit-animation: pulse2 3s infinite;
+      animation: pulse2 3s infinite;
+
+      &--4 {
+        margin-left: -30px;
+      }
     }
 
     &__expand {
       bottom: 10px;
+      right: 10px;
+      position: absolute;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+      -webkit-animation: pulse2 1s infinite;
+      animation: pulse2 1s infinite;
+    }
+
+    &__reduce {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      gap: 5px;
+      top: 10px;
       right: 10px;
       position: absolute;
       font-weight: 500;
@@ -463,6 +500,11 @@ body {
       }
     }
 
+    &__sup {
+      vertical-align: top;
+      font-size: 12px;
+    }
+
     &__link {
       display: block;
       margin: 0 auto;
@@ -486,7 +528,6 @@ body {
   }
 
   .es-disclaimer {
-    padding-top: 30px;
     padding-bottom: 50px;
     font-weight: 500;
     font-size: 11px;
@@ -704,8 +745,8 @@ body {
         &__packshot-img {
           width: 125px;
           right: 15px;
-          -webkit-animation: pulse2 3s infinite;
-          animation: pulse2 3s infinite;
+          -webkit-animation: pulse2 1s infinite;
+          animation: pulse2 1s infinite;
         }
 
         &__photo {
@@ -761,6 +802,10 @@ body {
         }
 
         &__expand {
+          display: none;
+        }
+
+        &__reduce {
           display: none;
         }
       }
@@ -831,6 +876,7 @@ body {
 
       .es-disclaimer {
         font-size: 14px;
+        padding-top: 30px;
         padding-bottom: 30px;
 
         &__logo {
