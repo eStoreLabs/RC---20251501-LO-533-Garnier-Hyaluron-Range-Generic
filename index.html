@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;700&family=Barlow:wght@300;500;700&family=Montserrat:wght@300;500;700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="./styles/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+      href="https://fonts.googleapis.com/css2?family=family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
   </head>
 
   <body>
@@ -19,38 +19,58 @@
       <div id="es-rc-content">
 
         <div class="es-kv">
-          <h2 class="es-kv__title">
-            <span class="es-kv__title--uppercase">WIĘCEJ NIŻ NAWILŻENIE:</span><br>
-            Odkryj nową gamę <br>
-            Hyaluron Barrier Repair
-          </h2>
 
           <div class="es-kv__content">
             <div class="es-kv__photo">
-            </div>
-            <img class="es-kv__bubbles"
-                 src="./images/bubbles.png"
-                 alt="">
-            <div class="es-kv__logo">
-              <img class="es-kv__logo-img"
-                   src="./images/logotyp.png"
-                   alt="Garnier logotyp">
-            </div>
-            <div class="es-kv__packshot">
-              <img class="es-kv__packshot-img"
-                   src="./images/packshot.png"
-                   alt="packshot">
+
+              <img class="es-kv__bubbles"
+                   src="./images/bubbles.png"
+                   alt="">
+              <div class="es-kv__logo">
+                <img class="es-kv__logo-img"
+                     src="./images/logotyp.png"
+                     alt="Garnier logotyp">
+              </div>
+              <div class="es-kv__packshot">
+                <img class="es-kv__packshot-img"
+                     src="./images/packshot.png"
+                     alt="packshot">
+                <img class="es-kv__packshot-img es-kv__packshot-img--desktop"
+                     src="./images/packshot-d.png"
+                     alt="packshot">
+              </div>
+              <div class="es-kv__title-wrapper es-kv__title-wrapper--1">
+                <h2 class="es-kv__title es-kv__title--mobile">
+                  <span class="es-kv__title--uppercase">WIĘCEJ NIŻ NAWILŻENIE:</span><br>
+                  Odkryj nową gamę <br>
+                  Hyaluron Barrier Repair
+                </h2>
+                <h2 class="es-kv__title es-kv__title--desktop">
+                  <span class="es-kv__title--uppercase">WIĘCEJ NIŻ NAWILŻENIE:</span><br>
+                </h2>
+              </div>
+              <div class="es-kv__title-wrapper es-kv__title-wrapper--2">
+                <h2 class="es-kv__title es-kv__title--mobile">
+                  <span class="es-kv__title--uppercase">WIĘCEJ NIŻ NAWILŻENIE:</span><br>
+                  Odkryj nową gamę <br>
+                  Hyaluron Barrier Repair
+                </h2>
+                <h2 class="es-kv__title es-kv__title--desktop">
+
+                  Odkryj nową gamę Hyaluron Barrier Repair
+                </h2>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="es-effects">
-          <h2 class="es-effects__title es-title">
-            Jakie efekty dają
-            produkty Hyaluron
-            Barrier Repair?
-          </h2>
-          <div class="es-effects__wrapper">
+          <div class="es-effects__group">
+            <h2 class="es-effects__title es-title">
+              Jakie efekty dają
+              produkty <span>Hyaluron
+                Barrier Repair?</span>
+            </h2>
             <div class="es-effects__item-wrapper">
               <div class="es-effects__item">
                 <img src="./images/check.png"
@@ -65,20 +85,22 @@
                 <p class="es-effects__text">Intensywnie nawilżają</p>
               </div>
             </div>
+          </div>
+          <div class="es-effects__wrapper">
+
             <div class="es-effects__photo">
               <img src="./images/effects-photo.png"
                    alt="Mężczyzna"
                    class="es-effects__photo-img">
-              <h3 class="es-effects__photo-title es-title">
-                Intensywne nawilżenie
-                dzięki kwasowi
-                hialuronowemu
-              </h3>
             </div>
           </div>
         </div>
 
         <div class="es-ba">
+          <h3 class="es-effects__photo-title es-title">
+            Czy wiesz, że
+            <span>kwas&nbsp;hialuronowy</span> intensywnie nawilża?
+          </h3>
           <div class="es-ba__wrapper">
             <img src="./images/ba.png"
                  alt=""
@@ -92,9 +114,10 @@
 
         <div class="es-ingredients">
           <h2 class="es-ingredients__title es-title">
-            składniki aktywne <br>
-            w serum ujędrniającym
+            Składniki aktywne <br>
+            <span>w serum ujędrniającym</span>
           </h2>
+          <p class="es-ingredients__expand"><span class="es-ingredients__expand--text">rozwiń</span> </p>
           <div class="es-ingredients__wrapper">
             <div class="es-ingredients__image">
 
@@ -132,7 +155,6 @@
                      src="./images/line-4.png"
                      alt="linia 4">
               </div>
-              <p class="es-ingredients__expand">rozwiń</p>
             </div>
             <div class="es-ingredients__list">
               <div class="es-ingredients__reduce">
@@ -153,7 +175,7 @@
                   ekstrakt z aloesu
                 </p>
                 <p class="es-ingredients__item-description">
-                  Składnik, który intensywnie
+                  Składnik, który
                   nawilża skórę.
                 </p>
               </div>
@@ -180,13 +202,17 @@
         </div>
 
         <div class="es-cross">
-          <p class="es-cross__title es-title">Odkryj gamę
-            Hyaluron</p>
-          <p class="es-cross__subtitle">
-            Nawilżaj, ujędrniaj i wzmacniaj<br>
-            barierę ochronną skóry.
-          </p>
+
           <div class="es-cross__products-group">
+            <div class="es-cross__products__title-group">
+              <p class="es-cross__title es-title">Odkryj gamę
+                <span>Hyaluron</span>
+              </p>
+              <p class="es-cross__subtitle">
+                Nawilżaj, ujędrniaj i wzmacniaj<br>
+                barierę ochronną skóry.
+              </p>
+            </div>
             <div class="es-cross__wrapper">
               <img src="./images/cross.png"
                    alt=""
@@ -234,31 +260,26 @@
                   <div class="es-cross__line"></div>
                 </div>
 
-                <div class="es-cross__circle-wrapper">
-                  <img src="./images/5.png"
-                       class="es-cross__circle es-cross__circle--4"
-                       data-info="Krem kojący"
-                       data-link="#"
-                       alt=""
-                       style="opacity: 0.5;">
-                  <div class="es-cross__line"></div>
-                </div>
                 <div id="info"
                      class="es-cross__product">Nawilżająca emulsja oczyszczająca</div>
               </div>
             </div>
-            <div class="es-slider">
-              <div class="swiper swiper1">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="es-slider__content">
-                      <div class="es-slider__image-group">
-                        <p class="es-slider__image-title">Esencja <br>
-                          nawilżająca</p>
-                        <img class="es-slider__image"
-                             src="./images/slide-1.png"
-                             alt="Esencja nawilżająca">
-                      </div>
+          </div>
+
+          <div class="es-slider">
+            <div class="swiper swiper1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="es-slider__content">
+                    <div class="es-slider__image-group">
+                      <p class="es-slider__image-title">Esencja <br>
+                        nawilżająca</p>
+                      <img class="es-slider__image"
+                           src="./images/slide-1.png"
+                           alt="Esencja nawilżająca">
+                    </div>
+
+                    <div class="es-slider__text-group">
                       <div class="es-slider__group">
                         <p class="es-slider__title es-title">jak działa?</p>
                         <p class="es-slider__description">Zapewnia do 100 godzin<sup class="es-slider__sup">1</sup>
@@ -274,16 +295,18 @@
                          class="es-slider__link">dodaj do koszyka</a>
                     </div>
                   </div>
+                </div>
 
-                  <div class="swiper-slide">
-                    <div class="es-slider__content">
-                      <div class="es-slider__image-group">
-                        <p class="es-slider__image-title">Serum
-                          odbudowujące</p>
-                        <img class="es-slider__image"
-                             src="./images/slide-2.png"
-                             alt="Serum odbudowujące">
-                      </div>
+                <div class="swiper-slide">
+                  <div class="es-slider__content">
+                    <div class="es-slider__image-group">
+                      <p class="es-slider__image-title">Serum
+                        odbudowujące</p>
+                      <img class="es-slider__image"
+                           src="./images/slide-2.png"
+                           alt="Serum odbudowujące">
+                    </div>
+                    <div class="es-slider__text-group">
                       <div class="es-slider__group">
                         <p class="es-slider__title es-title">benefity</p>
                         <p class="es-slider__description">Serum stworzone dla skóry wrażliwej, aby intensywnie nawilżyć
@@ -301,16 +324,19 @@
                          class="es-slider__link">dodaj do koszyka</a>
                     </div>
                   </div>
+                </div>
 
-                  <div class="swiper-slide">
-                    <div class="es-slider__content">
-                      <div class="es-slider__image-group">
-                        <p class="es-slider__image-title">Krem
-                          kojący</p>
-                        <img class="es-slider__image"
-                             src="./images/slide-3.png"
-                             alt="Krem kojący ">
-                      </div>
+                <div class="swiper-slide">
+                  <div class="es-slider__content">
+                    <div class="es-slider__image-group">
+                      <p class="es-slider__image-title">Krem <br>
+                        kojący</p>
+                      <img class="es-slider__image"
+                           src="./images/slide-3.png"
+                           alt="Krem kojący ">
+                    </div>
+                    <div class="es-slider__text-group">
+
                       <div class="es-slider__group">
                         <p class="es-slider__title es-title">benefity</p>
                         <p class="es-slider__description">Nawilża do 48 godzin<sup class="es-slider__sup">4</sup>,
@@ -328,17 +354,20 @@
                       </div>
                       <a href="#"
                          class="es-slider__link">dodaj do koszyka</a>
+
                     </div>
                   </div>
+                </div>
 
-                  <div class="swiper-slide">
-                    <div class="es-slider__content">
-                      <div class="es-slider__image-group">
-                        <p class="es-slider__image-title">Niewidoczny fluid chroniący<br> barierę skóry SPF50+</p>
-                        <img class="es-slider__image"
-                             src="./images/slide-4.png"
-                             alt="Niewidoczny fluid chroniący barierę skóry SPF50+">
-                      </div>
+                <div class="swiper-slide">
+                  <div class="es-slider__content">
+                    <div class="es-slider__image-group">
+                      <p class="es-slider__image-title">Niewidoczny fluid chroniący<br> barierę skóry SPF50+</p>
+                      <img class="es-slider__image"
+                           src="./images/slide-4.png"
+                           alt="Niewidoczny fluid chroniący barierę skóry SPF50+">
+                    </div>
+                    <div class="es-slider__text-group">
                       <div class="es-slider__group">
                         <p class="es-slider__title es-title">benefity</p>
                         <p class="es-slider__description">Chroni skórę przed promieniowaniem UVB, UVA i długim UVA
@@ -358,19 +387,18 @@
                   </div>
                 </div>
               </div>
-
-              <div class="swiper1-button-prev swiper-button-prev">
-                <img src="./images/arrow-left.png"
-                     alt="poprzedni slajd">
-              </div>
-              <div class="swiper1-button-next swiper-button-next">
-                <img src="./images/arrow-left.png"
-                     alt="następny slajd">
-              </div>
-
-              <div class="swiper1-pagination swiper-pagination"></div>
             </div>
 
+            <div class="swiper1-button-prev swiper-button-prev">
+              <img src="./images/arrow-left.png"
+                   alt="poprzedni slajd">
+            </div>
+            <div class="swiper1-button-next swiper-button-next">
+              <img src="./images/arrow-left.png"
+                   alt="następny slajd">
+            </div>
+
+            <div class="swiper1-pagination swiper-pagination"></div>
           </div>
 
 
