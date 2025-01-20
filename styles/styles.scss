@@ -952,12 +952,16 @@ body {
       }
 
       &__wrapper {
-        width: 50%;
+        width: 60%;
         margin-right: -10px;
       }
 
+      &__products-title-group {
+        width: 40%;
+      }
+
       &__img {
-        margin-right: 0;
+        // margin-right: 0;
       }
 
       &__numbers {
@@ -994,11 +998,11 @@ body {
         }
 
         &__image-group {
-          width: 50%;
+          width: 40%;
         }
 
         &__text-group {
-          width: 50%;
+          width: 60%;
         }
 
         &__image {
@@ -1006,7 +1010,7 @@ body {
         }
 
         &__image-title {
-          left: 20%;
+          left: 12%;
           max-width: 185px;
           font-size: 19px;
         }
@@ -1055,7 +1059,7 @@ body {
 
     .es-cross {
       &__numbers {
-        margin-right: 0;
+        // margin-right: 0;
         -webkit-column-gap: 50px;
         -moz-column-gap: 50px;
         column-gap: 50px;
