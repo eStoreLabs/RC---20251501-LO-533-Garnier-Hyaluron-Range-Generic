@@ -715,7 +715,7 @@ body {
   }
   #es-rc #es-rc-content .es-cross__wrapper {
     width: 50%;
-    margin-right: -15px;
+    margin-right: -10px;
   }
   #es-rc #es-rc-content .es-cross__img {
     margin-right: 0;
@@ -777,6 +777,12 @@ body {
   #es-rc #es-rc-content .es-disclaimer__logo:hover {
     transform: scale(1.1);
   }
+  #es-rc #es-rc-content .swiper-button-next {
+    right: -0.5%;
+  }
+  #es-rc #es-rc-content .swiper-button-prev {
+    left: -0.5%;
+  }
 }
 @media screen and (min-width: 998px) {
   #es-rc #es-rc-content .es-kv__title {
@@ -785,8 +791,11 @@ body {
   #es-rc #es-rc-content .es-cross__numbers {
     margin-right: 0;
     -moz-column-gap: 50px;
-         column-gap: 50px;
+    column-gap: 50px;
     justify-content: center;
+  }
+  #es-rc #es-rc-content .es-cross__wrapper {
+    margin-right: -15px;
   }
 }
 @keyframes zoom {

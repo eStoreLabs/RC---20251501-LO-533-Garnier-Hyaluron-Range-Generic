@@ -127,9 +127,6 @@ body {
       background-size: cover;
     }
 
-    &__packshot {
-    }
-
     &__packshot-img {
       position: absolute;
       @include img;
@@ -367,6 +364,7 @@ body {
       color: $color-main;
 
       &--text {
+        -webkit-animation: pulse2 1s infinite;
         animation: pulse2 1s infinite;
         display: inline-block;
       }
@@ -706,6 +704,7 @@ body {
 
         &--desktop {
           display: block;
+          -webkit-animation: pulse2 1s infinite;
           animation: pulse2 1s infinite;
         }
       }
@@ -844,8 +843,11 @@ body {
     }
 
     .es-effects {
+      display: -webkit-box;
       display: flex;
+      -webkit-box-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: center;
       align-items: center;
 
       &__wrapper {
@@ -856,9 +858,6 @@ body {
         width: 60%;
       }
 
-      &__photo {
-      }
-
       &__item-wrapper {
         gap: 50px;
       }
@@ -867,7 +866,9 @@ body {
         max-width: 350px;
 
         &:hover {
+          -webkit-transition: all 0.3s;
           transition: all 0.3s;
+          -webkit-transform: scale(1.1);
           transform: scale(1.1);
         }
       }
@@ -876,10 +877,12 @@ body {
         font-size: 20px;
 
         &:hover {
+          -webkit-transition: all 0.3s;
           transition: all 0.3s;
         }
 
         &:hover {
+          -webkit-transform: scale(1.1);
           transform: scale(1.1);
         }
       }
@@ -950,7 +953,7 @@ body {
 
       &__wrapper {
         width: 50%;
-        margin-right: -15px;
+        margin-right: -10px;
       }
 
       &__img {
@@ -980,7 +983,9 @@ body {
         }
 
         &__content {
+          display: -webkit-box;
           display: flex;
+          -webkit-box-align: center;
           align-items: center;
           width: 100%;
           max-width: 95%;
@@ -1022,12 +1027,22 @@ body {
 
       &__logo {
         margin-top: 30px;
+        -webkit-transition: all 0.3s;
         transition: all 0.3s;
 
         &:hover {
+          -webkit-transform: scale(1.1);
           transform: scale(1.1);
         }
       }
+    }
+
+    .swiper-button-next {
+      right: -0.5%;
+    }
+
+    .swiper-button-prev {
+      left: -0.5%;
     }
   }
 
@@ -1041,8 +1056,15 @@ body {
     .es-cross {
       &__numbers {
         margin-right: 0;
+        -webkit-column-gap: 50px;
+        -moz-column-gap: 50px;
         column-gap: 50px;
+        -webkit-box-pack: center;
         justify-content: center;
+      }
+
+      &__wrapper {
+        margin-right: -15px;
       }
     }
   }
