@@ -863,7 +863,7 @@ body {
       }
 
       &__item {
-        max-width: 350px;
+        max-width: 240px;
 
         &:hover {
           -webkit-transition: all 0.3s;
@@ -1043,10 +1043,14 @@ body {
 
     .swiper-button-next {
       right: -0.5%;
+      top: 50%;
+      animation: pulse2 1s infinite;
     }
 
     .swiper-button-prev {
       left: -0.5%;
+      top: 50%;
+      animation: pulse2 1s infinite;
     }
   }
 

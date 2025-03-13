@@ -658,7 +658,7 @@ body {
     gap: 50px;
   }
   #es-rc #es-rc-content .es-effects__item {
-    max-width: 350px;
+    max-width: 240px;
   }
   #es-rc #es-rc-content .es-effects__item:hover {
     transition: all 0.3s;
@@ -779,9 +779,13 @@ body {
   }
   #es-rc #es-rc-content .swiper-button-next {
     right: -0.5%;
+    top: 50%;
+    animation: pulse2 1s infinite;
   }
   #es-rc #es-rc-content .swiper-button-prev {
     left: -0.5%;
+    top: 50%;
+    animation: pulse2 1s infinite;
   }
 }
 @media screen and (min-width: 998px) {
