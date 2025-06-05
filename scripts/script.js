@@ -1,12 +1,20 @@
 (() => {
-  const circles = document.querySelectorAll('.es-cross__circle');
-  const infoElement = document.getElementById('info');
-  const expandBtn = document.querySelector('.es-ingredients__expand');
-  const reduceBtn = document.querySelector('.es-ingredients__reduce');
-  const list = document.querySelector('.es-ingredients__list');
+  const circles = document.querySelectorAll(
+    '#es-rc #es-rc-content .es-cross__circle',
+  );
+  const infoElement = document.getElementById('es-info');
+  const expandBtn = document.querySelector(
+    '#es-rc #es-rc-content .es-ingredients__expand',
+  );
+  const reduceBtn = document.querySelector(
+    '#es-rc #es-rc-content .es-ingredients__reduce',
+  );
+  const list = document.querySelector(
+    '#es-rc #es-rc-content .es-ingredients__list',
+  );
 
   function toggleList() {
-    const isOpen = list.classList.toggle('open');
+    const isOpen = list.classList.toggle('es-open');
     expandBtn.style.display = isOpen ? 'none' : 'block';
     reduceBtn.style.display = isOpen ? 'flex' : 'none';
   }
