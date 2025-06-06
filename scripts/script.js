@@ -2,7 +2,7 @@
   const circles = document.querySelectorAll(
     '#es-rc #es-rc-content .es-cross__circle',
   );
-  const infoElement = document.getElementById('es-info');
+  const infoElement = document.querySelector('#es-rc #es-rc-content #es-info');
   const expandBtn = document.querySelector(
     '#es-rc #es-rc-content .es-ingredients__expand',
   );
@@ -22,17 +22,17 @@
   expandBtn.addEventListener('click', toggleList);
   reduceBtn.addEventListener('click', toggleList);
 
-  const swiper = new Swiper('.swiper1', {
+  const swiper = new Swiper('#es-rc #es-rc-content .swiper1', {
     loop: false,
     autoHeight: true,
     initialSlide: 0,
     pagination: {
-      el: '.swiper1-pagination',
+      el: '#es-rc #es-rc-content .swiper1-pagination',
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper1-button-next',
-      prevEl: '.swiper1-button-prev',
+      nextEl: '#es-rc #es-rc-content .swiper1-button-next',
+      prevEl: '#es-rc #es-rc-content .swiper1-button-prev',
     },
   });
 
@@ -41,14 +41,14 @@
   function updateActiveCircle(index) {
     circles.forEach((item, i) => {
       item.style.opacity = '0.5';
-      item.classList.remove('active');
+      item.classList.remove('es-active');
       const line = item.nextElementSibling;
       if (line) line.style.opacity = '0';
     });
 
     const circle = circles[index];
     circle.style.opacity = '1';
-    circle.classList.add('active');
+    circle.classList.add('es-active');
 
     const currentLine = circle.nextElementSibling;
     if (currentLine) currentLine.style.opacity = '1';
